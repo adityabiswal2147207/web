@@ -1,9 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-//var pug = require('pug');
-
-
 var port = 3000;
 
 var app = express();
@@ -37,6 +34,14 @@ app.get('/media',function(req,res){
 
 app.get('/contact',function(req,res){
     res.render('contact');
+});
+
+app.get('/login',function(req,res){
+    res.render('login');
+});
+
+app.get('/register',function(req,res){
+    res.render('register');
 });
 
 app.listen(port);
